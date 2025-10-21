@@ -1,2 +1,20 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+.myContainer {
+  @apply w-11/12 mx-auto;
+}
+
+.navbar .menu {
+  @apply space-x-5;
+}
+
+.navbar a {
+  @apply bg-transparent px-2 py-1 rounded-full;
+}
+
+.navbar a.active {
+  @apply bg-white/50 text-white;
+}

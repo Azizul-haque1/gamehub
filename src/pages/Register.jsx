@@ -22,7 +22,7 @@ const Register = () => {
 
         createUserFunc(email, password)
             .then(res => {
-                const user = res.user
+                const currentUser = res.user
                 // console.log(user);
                 updateProfileFunc(displayName, photoURL)
                     .then(() => {
@@ -38,7 +38,7 @@ const Register = () => {
                         console.log(error);
                     })
 
-                // setUser(user)
+                setUser(currentUser)
 
             })
             .catch(error => {

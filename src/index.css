@@ -18,9 +18,9 @@
 .navbar .menu {
   @apply space-x-5;
 }
-.navbar a {
+.navbar ul a {
   @apply border-b border-transparent hover:text-primary;
 }
-.navbar a.active {
+.navbar ul a.active {
   @apply text-primary border-primary;
 }

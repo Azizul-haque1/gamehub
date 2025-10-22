@@ -1,10 +1,11 @@
 import React, { use } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import logo from '../assets/logo.png'
 import { AuthContext } from '../contexts/AuthContext';
 
 const Navbar = () => {
     const { user, signOutFunc } = use(AuthContext)
+    const navigate = useNavigate()
     console.log(user);
     const links = <>
         <NavLink to='/'>Home</NavLink>
@@ -46,27 +47,32 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user ? <div className="dropdown  dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img
-                                    alt="Tailwind CSS Navbar component"
-                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    user ? <div className='flex items-center space-x-3'>
+                        <div className="">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div onClick={() => navigate('/profile')} className="w-10 rounded-full">
+                                    <img
+                                        alt="Tailwind CSS Navbar component"
+                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
                             </div>
+                            {/* <ul
+                                tabIndex="-1"
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                                <li>
+                                    <a className="justify-between">
+                                        Profile
+                                    </a>
+                                </li>
+                                <li><a>Settings</a></li>
+                                <li ></li>
+                            </ul> */}
+
                         </div>
-                        <ul
-                            tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li>
-                                <a className="justify-between">
-                                    Profile
-                                </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li ><button onClick={handleLogOut} type='button'>Logout</button></li>
-                        </ul>
+                        <button className=' px-3 py-1 rounded-full border border-transparent text-white bg-primary hover:border-primary hover:bg-white hover:text-primary' onClick={handleLogOut} type='button'>Logout</button>
+
                     </div>
-                        : <Link to='/auth/login' className='btn'>Login</Link>
+                        : <Link to='/auth/login' className='px-4 py-1 rounded-full border border-transparent text-white bg-primary hover:border-primary hover:bg-white hover:text-primary'>Login</Link>
                 }
             </div>
         </div>

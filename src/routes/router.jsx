@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../layout/AuthLayout";
 import ForgetPassword from "../pages/ForgetPassword";
+import Profile from "../pages/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
                 index: true,
                 Component: Home,
             },
+
         ]
     },
     {
@@ -36,6 +38,11 @@ export const router = createBrowserRouter([
             }
 
         ]
+    },
+
+    {
+        path: '/profile',
+        Component: Profile
     }
 
 ])

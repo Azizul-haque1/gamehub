@@ -5,7 +5,7 @@ import bgImge from '../assets/bg.png'
 
 const AuthLayout = () => {
     return (
-        <div className='h-screen' style={{ backgroundImage: `url('${bgImge}')` }}>
+        <div className='h-screen'>
             <header className='  bg-white/10 backdrop-blur-lg '>
                 <nav className='myContainer'>
                     <Navbar />
@@ -15,7 +15,7 @@ const AuthLayout = () => {
             <main>
                 <Outlet></Outlet>
             </main>
-        </div>
+        </div >
     );
 };
 

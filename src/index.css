@@ -1,6 +1,10 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: light --default;
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #20c997;
+  --color-secondary: teal;
 }
 
 .myContainer {
@@ -11,10 +15,6 @@
   @apply space-x-5;
 }
 
-.navbar a {
-  @apply bg-transparent px-2 py-1 rounded-full;
-}
-
 .navbar a.active {
-  @apply bg-white/50 text-white;
+  @apply bg-white/50;
 }

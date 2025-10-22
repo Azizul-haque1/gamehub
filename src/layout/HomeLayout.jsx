@@ -5,8 +5,10 @@ import Footer from '../componets/Footer';
 import bgImge from '../assets/bg.png'
 const HomeLayout = () => {
     return (
-        <div className='h-screen ' style={{ backgroundImage: `url('${bgImge}')` }}>
-            <header className=' rounded-lg bg-white/10 backdrop-blur-lg '>
+        <div className='h-screen  '
+        // style={{ backgroundImage: `url('${bgImge}')` }}
+        >
+            <header className=' '>
                 <nav className='myContainer'>
                     <Navbar />
                 </nav>

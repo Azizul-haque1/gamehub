@@ -1,9 +1,12 @@
 import React, { use } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../contexts/AuthContext';
+import { toast } from 'react-toastify';
 
 const Register = () => {
     const { createUserFunc,
+        setUser,
+        signOutFunc,
         updateProfileFunc,
         sendEmailVerificationFunc,
 
@@ -20,12 +23,13 @@ const Register = () => {
         createUserFunc(email, password)
             .then(res => {
                 const user = res.user
-                console.log(user);
+                // console.log(user);
                 updateProfileFunc(displayName, photoURL)
                     .then(() => {
                         sendEmailVerificationFunc()
-                            .then((r) => {
-                                console.log(r);
+                            .then(() => {
+                                toast.success("Clicking on the verification link within the email.")
+                                signOutFunc()
                             })
                             .catch(er => console.log(er))
 
@@ -33,6 +37,8 @@ const Register = () => {
                     .catch(error => {
                         console.log(error);
                     })
+
+                // setUser(user)
 
             })
             .catch(error => {

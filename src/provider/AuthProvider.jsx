@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
-import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, signOut, updateProfile } from 'firebase/auth';
 import { auth } from '../firebase/firebase.config';
 
 const AuthProvider = ({ children }) => {
 
-    const [user, setUser] = useState()
+    const [user, setUser] = useState(null)
 
 
     const createUserFunc = (email, password) => {
@@ -19,6 +19,10 @@ const AuthProvider = ({ children }) => {
     }
     const sendEmailVerificationFunc = () => {
         return sendEmailVerification(auth.currentUser)
+    }
+
+    const signOutFunc = () => {
+        return signOut(auth)
     }
 
     useEffect(() => {
@@ -39,6 +43,7 @@ const AuthProvider = ({ children }) => {
         createUserFunc,
         updateProfileFunc,
         sendEmailVerificationFunc,
+        signOutFunc,
 
 
     }

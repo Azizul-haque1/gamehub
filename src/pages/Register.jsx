@@ -64,15 +64,15 @@ const Register = () => {
                         <fieldset className="fieldset">
                             {/* Name */}
                             <label className="label">Name</label>
-                            <input name='name' type="text" className="input" placeholder="Name" />
+                            <input name='name' type="text" className="input border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent " placeholder="Name" />
                             <label className="label">Photo Url</label>
-                            <input name='photo' type="text" className="input" placeholder="Photo url here" />
+                            <input name='photo' type="text" className="input border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:placeholder-neutral-content" placeholder="Photo url here" />
                             <label className="label">Email</label>
-                            <input name='email' type="email" className="input" placeholder="Email" />
+                            <input name='email' type="email" className="input border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:placeholder-neutral-content" placeholder="Email" />
                             <label className="label">Password</label>
-                            <input name='password' type="password" className="input" placeholder="Password" />
+                            <input name='password' type="password" className="input border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:placeholder-neutral-content" placeholder="Password" />
                             <div><a className="link link-hover">Forgot password?</a></div>
-                            <button className="btn btn-neutral mt-4">Login</button>
+                            <button className="btn btn-neutral mt-4 hover:bg-primary border-transparent">Create Account</button>
                             <p className='pt-2'>Already have an account? <Link to='/auth/login' className='text-green-500 hover:underline'>Login</Link>
 
                             </p>

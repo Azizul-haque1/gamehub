@@ -1,8 +1,12 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
+
   --color-primary: #20c997;
   --color-secondary: teal;
 }
@@ -14,7 +18,9 @@
 .navbar .menu {
   @apply space-x-5;
 }
-
+.navbar a {
+  @apply border-b border-transparent hover:text-primary;
+}
 .navbar a.active {
-  @apply bg-white/50;
+  @apply text-primary border-primary;
 }

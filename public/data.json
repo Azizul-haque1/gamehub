@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknowns Battle Ground: PUBG",
+    "coverPhoto": "https://wallpapercave.com/dwp1x/wp4037778.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Neon Drift",
+    "coverPhoto": "https://img.itch.zone/aW1nLzIyNDYzNzg3LnBuZw==/original/nvtmAl.png",
+    "category": "Racing",
+    "downloadLink": "https://designed-by-jonas.itch.io/neon-drift",
+    "description": "An urban neon-styled racing game with tight controls and multiplayer leaderboards.",
+    "ratings": "4.8",
+    "developer": "Indie Studio"
+  },
+  {
+    "id": "3",
+    "title": "Sky Fortress",
+    "coverPhoto": "https://i.ibb.co.com/WN3VqhWh/Sky-Fortress-Logo.webp",
+    "category": "Strategy",
+    "downloadLink": "https://www.xbox.com/en-US/games/store/just-cause-3-sky-fortress/BZNWF8K967VV",
+    "description": "Build and defend your sky fortress against waves of enemies in a vibrant world.",
+    "ratings": "4.6",
+    "developer": "Sky Labs"
+  }
+]

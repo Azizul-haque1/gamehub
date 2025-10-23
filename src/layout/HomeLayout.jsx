@@ -8,7 +8,7 @@ const HomeLayout = () => {
         <div className='h-screen  '
         // style={{ backgroundImage: `url('${bgImge}')` }}
         >
-            <header className=' '>
+            <header className='sticky bg-white/50 top-0 h-fit overflow-hidden z-20  '>
                 <nav className='myContainer'>
                     <Navbar />
                 </nav>

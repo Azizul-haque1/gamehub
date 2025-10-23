@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
 
@@ -11,6 +11,8 @@ const Register = () => {
         sendEmailVerificationFunc,
 
     } = use(AuthContext)
+
+    const navigate = useNavigate()
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -30,6 +32,8 @@ const Register = () => {
                             .then(() => {
                                 toast.success("Clicking on the verification link within the email.")
                                 signOutFunc()
+
+
                             })
                             .catch(er => console.log(er))
 
@@ -71,7 +75,6 @@ const Register = () => {
                             <input name='email' type="email" className="input border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:placeholder-neutral-content" placeholder="Email" />
                             <label className="label">Password</label>
                             <input name='password' type="password" className="input border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:placeholder-neutral-content" placeholder="Password" />
-                            <div><a className="link link-hover">Forgot password?</a></div>
                             <button className="btn btn-neutral mt-4 hover:bg-primary border-transparent">Create Account</button>
                             <p className='pt-2'>Already have an account? <Link to='/auth/login' className='text-green-500 hover:underline'>Login</Link>
 

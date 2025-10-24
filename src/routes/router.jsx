@@ -9,6 +9,7 @@ import Profile from "../pages/Profile";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile";
 import GameDetails from "../pages/GameDetails";
+import NotFoundPage from "../pages/NotFoundPage";
 
 export const router = createBrowserRouter([
     {
@@ -62,7 +63,7 @@ export const router = createBrowserRouter([
 
     {
         path: '*',
-        element: <h1>eroro</h1>
+        element: <NotFoundPage />
 
     }
 

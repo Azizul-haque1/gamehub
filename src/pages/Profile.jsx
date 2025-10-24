@@ -1,13 +1,19 @@
 import React, { use } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
+import { FaUserEdit } from 'react-icons/fa';
+import Loader from '../componets/Loader';
 
 const Profile = () => {
-    const { user, updateProfileFunc } = use(AuthContext)
+    const { user, loading } = use(AuthContext)
 
-    const handleUpdataProfile = () => {
 
+
+    if (loading) {
+        return <Loader />
     }
+
+
     return (
         <div className="hero h-screen">
             <div className='  flex  justify-center items-center rounded-2xl   p-20 shadow-2xl'>
@@ -17,7 +23,7 @@ const Profile = () => {
 
                             referrerPolicy="no-referrer"
                             alt="Tailwind CSS Navbar component"
-                            src={`${user?.photoURL ? user.photoURL : 'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'}`} />
+                            src={`${user?.photoURL ? user.photoURL : 'https://avatar.iran.liara.run/public/1'}`} />
 
                     </div>
 
@@ -27,7 +33,8 @@ const Profile = () => {
                         <h1 className='text-xl bg-gray-100 p-1 rounded-xs'>{user.displayName}</h1>
                         <p className='text-gray-500 text-xs mt-2 mb-1'>Emal</p>
                         <h1 className='text-xl bg-gray-100 p-1 rounded-xs mb-5'>{user.email}</h1>
-                        <Link to='/update-profile' className='px-4 py-1 w-full rounded-full border border-transparent text-white bg-primary hover:border-primary hover:bg-white hover:text-primary'>Update </Link>
+                        <Link to='/update-profile' className=' flex items-center  gap-1  justify-center px-4 py-1 w-full rounded-full border border-transparent text-white bg-primary hover:border-primary hover:bg-white hover:text-primary'><span><FaUserEdit />
+                        </span> Update</Link>
                     </div>
 
                 </div>

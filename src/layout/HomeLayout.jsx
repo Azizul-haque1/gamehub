@@ -2,11 +2,11 @@ import React from 'react';
 import Navbar from '../componets/Navbar';
 import { Outlet } from 'react-router';
 import Footer from '../componets/Footer';
-import bgImge from '../assets/bg.png'
+
 const HomeLayout = () => {
     return (
         <div className='h-screen  '
-        // style={{ backgroundImage: `url('${bgImge}')` }}
+
         >
             <header className='sticky bg-white/50 top-0 h-fit overflow-hidden z-20  '>
                 <nav className='myContainer'>

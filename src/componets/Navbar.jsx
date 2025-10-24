@@ -52,12 +52,12 @@ const Navbar = () => {
                     user ? <div className='flex items-center space-x-3'>
                         <div className="">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                <div onClick={() => navigate('/profile')} className="w-10 rounded-full">
+                                <div onClick={() => navigate('/my-profile')} className="w-10 rounded-full">
                                     <img
 
                                         referrerPolicy="no-referrer"
                                         alt="Tailwind CSS Navbar component"
-                                        src={`${user?.photoURL ? user.photoURL : 'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'}`} />
+                                        src={`${user?.photoURL ? user.photoURL : 'https://avatar.iran.liara.run/public/1'}`} />
 
 
                                 </div>

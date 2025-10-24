@@ -55,11 +55,11 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscirbe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser)
+            setLoading(false)
         })
 
         return () => {
             unsubscirbe()
-            setLoading(false)
         }
     }, [])
 
@@ -69,6 +69,8 @@ const AuthProvider = ({ children }) => {
         user,
         setUser,
         createUserFunc,
+        loading,
+        setLoading,
         updateProfileFunc,
         sendEmailVerificationFunc,
         signOutFunc,

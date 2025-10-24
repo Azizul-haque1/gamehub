@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Loader from '../componets/Loader';
 
 const Login = () => {
 
@@ -61,8 +62,9 @@ const Login = () => {
 
     }
 
+
     if (loading) {
-        return <h1>loadi...</h1>
+        return <Loader />
     }
     const showErrorToast = (code) => {
         switch (code) {
@@ -98,6 +100,8 @@ const Login = () => {
         }
 
     };
+
+    
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -128,7 +132,6 @@ const Login = () => {
                                 Login with Google
                             </button>
                             <p className='pt-2'>Don't have an account?  <Link to='/auth/register' className='text-green-500 hover:underline'>Create here</Link>
-
                             </p>
                         </fieldset>
                     </form>

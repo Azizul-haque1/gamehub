@@ -8,6 +8,7 @@ import ForgetPassword from "../pages/ForgetPassword";
 import Profile from "../pages/Profile";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile";
+import GameDetails from "../pages/GameDetails";
 
 export const router = createBrowserRouter([
     {
@@ -15,12 +16,11 @@ export const router = createBrowserRouter([
         Component: HomeLayout,
         children: [
             {
-                path: '/',
                 index: true,
                 Component: Home,
             },
             {
-                path: '/profile',
+                path: '/my-profile',
                 element: <PrivateRoute>
                     <Profile></Profile>
                 </PrivateRoute>
@@ -30,7 +30,13 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <UpdateProfile />
                 </PrivateRoute>
-            }
+            },
+            {
+                path: '/game-details/:id',
+                element: <PrivateRoute>
+                    <GameDetails />
+                </PrivateRoute>
+            },
 
         ]
     },
@@ -53,6 +59,12 @@ export const router = createBrowserRouter([
 
         ]
     },
+
+    {
+        path: '*',
+        element: <h1>eroro</h1>
+
+    }
 
 
 

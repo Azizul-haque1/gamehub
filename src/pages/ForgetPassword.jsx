@@ -12,7 +12,7 @@ const ForgetPassword = () => {
         sendPasswordResetEmailFunc(email)
             .then(() => {
 
-                
+
                 toast.success('Reset link sent to your email')
             })
             .catch(error => {
@@ -28,6 +28,7 @@ const ForgetPassword = () => {
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
+                    <title>Forget Passwod</title>
 
                 </div>
 

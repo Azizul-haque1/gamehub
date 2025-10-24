@@ -1,10 +1,11 @@
 import React, { use } from 'react';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
 import useFetch from '../hooks/useFetch';
 import Loader from './Loader';
 
@@ -24,7 +25,8 @@ const Slider = () => {
 
                 spaceBetween={10}
                 height
-                modules={[Pagination, Autoplay]}
+                modules={[Pagination, Autoplay, Navigation]}
+                navigation
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 2000 }}
                 slidesPerView={1}
@@ -37,10 +39,7 @@ const Slider = () => {
                 <SwiperSlide><img className=' object-cover h-[600px] w-full' src="https://i.ibb.co.com/cSQdg7tf/mango-min.jpg" alt="" /></SwiperSlide>
                 <SwiperSlide><img className=' object-cover h-[600px] w-full' src="https://i.ibb.co.com/xt98PwZq/jackfruit-min.jpg" alt="" /></SwiperSlide>
                 <SwiperSlide><img className=' object-cover h-[600px] w-full' src="https://i.ibb.co.com/qY8qS7YN/champa-min.jpg" alt="" /></SwiperSlide>
-                {/* <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide> */}
-                ...
+
             </Swiper>
         </div>
     );

@@ -6,6 +6,8 @@ import Register from "../pages/Register";
 import AuthLayout from "../layout/AuthLayout";
 import ForgetPassword from "../pages/ForgetPassword";
 import Profile from "../pages/Profile";
+import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../pages/UpdateProfile";
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +19,18 @@ export const router = createBrowserRouter([
                 index: true,
                 Component: Home,
             },
+            {
+                path: '/profile',
+                element: <PrivateRoute>
+                    <Profile></Profile>
+                </PrivateRoute>
+            },
+            {
+                path: '/update-profile',
+                element: <PrivateRoute>
+                    <UpdateProfile />
+                </PrivateRoute>
+            }
 
         ]
     },
@@ -40,9 +54,6 @@ export const router = createBrowserRouter([
         ]
     },
 
-    {
-        path: '/profile',
-        Component: Profile
-    }
+
 
 ])

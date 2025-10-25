@@ -31,8 +31,7 @@ const PopularGames = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
                 viewport={{ once: true, amount: 0.50 }}
-                className="grid grid-cols-1
-                  md:grid-cols-2 lg:grid-cols-3 gap-4 my-10 ">
+                className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 my-10 ">
                 {newData.map((singleGame) => <GameCard key={singleGame.id} singleGame={singleGame}></GameCard>)}
 
             </motion.div>

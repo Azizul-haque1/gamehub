@@ -98,5 +98,3 @@ http://localhost:5173
 ---
 
 ## 🏁 License
-
-This project is licensed under the **MIT License** — free to use and modify for personal or commercial purposes.

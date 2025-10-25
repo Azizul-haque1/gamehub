@@ -29,6 +29,7 @@ const GameDetails = () => {
     console.log(filteredData);
     return (
         <div className=' p-4 bg-[#F9F8F5]'>
+            <title>Game Details</title>
             {loading && <Loader />}
             {
                 !loading && data &&

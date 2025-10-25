@@ -6,6 +6,7 @@ import NewsLetter from '../componets/NewsLetter';
 const Home = () => {
     return (
         <div>
+            <title>home</title>
             <section>
                 <Slider />
             </section>

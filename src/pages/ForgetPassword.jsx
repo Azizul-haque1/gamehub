@@ -11,9 +11,9 @@ const ForgetPassword = () => {
         const email = emailRef.current.value;
         sendPasswordResetEmailFunc(email)
             .then(() => {
-
-
                 toast.success('Reset link sent to your email')
+                window.open("https://mail.google.com", "_blank");
+
             })
             .catch(error => {
                 console.log(error);
@@ -26,6 +26,7 @@ const ForgetPassword = () => {
     }
     return (
         <div className="hero bg-base-100 min-h-screen">
+            <title>Forget Password</title>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <title>Forget Passwod</title>

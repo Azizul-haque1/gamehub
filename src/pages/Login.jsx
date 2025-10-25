@@ -26,6 +26,7 @@ const Login = () => {
                 if (!currentUser.emailVerified) {
                     signOutFunc()
                         .then(res => {
+                            setLoading(false)
                             console.log(res);
                             return toast.warning('verify your account')
                         })
@@ -40,6 +41,7 @@ const Login = () => {
                 navigate(location.state ? location.state : '/')
             })
             .catch(error => {
+                setLoading(false)
                 showErrorToast(error.code);
             })
 
@@ -53,7 +55,8 @@ const Login = () => {
             .then(res => {
                 console.log(res);
                 setUser(res.user)
-                navigate('/')
+                navigate(location.state ? location.state : '/')
+                toast.success('Login Successfull')
             }
             )
             .catch(error => {
@@ -104,6 +107,7 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen">
+            <title>login</title>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
 

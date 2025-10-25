@@ -6,6 +6,7 @@ const CommunityPage = () => {
     return (
 
         <div className='w-full relative h-screen '>
+            <title>Community Page</title>
 
             <div
                 style={{ backgroundImage: "url('https://i.ibb.co.com/hRX57VBX/8764038.jpg')" }}

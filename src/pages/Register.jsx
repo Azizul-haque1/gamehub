@@ -111,6 +111,7 @@ const Register = () => {
     };
     return (
         <div className="hero min-h-screen mt-5">
+            <title>Create  Acount</title>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
 

@@ -6,6 +6,7 @@ import Footer from '../componets/Footer';
 const NotFoundPage = () => {
     return (
         <div className="">
+            <title>Not found</title>
             <Navbar />
             <div className='flex gap-7 items-center flex-col justify-center h-screen'>
                 <img className='w-100' src="https://i.ibb.co.com/KjvZXTJ6/404-1.png" alt="" />

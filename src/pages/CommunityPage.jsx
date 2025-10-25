@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 const CommunityPage = () => {
     return (
 
-        <div className='w-full relative h-screen '>
+        <div className='w-full relative min-h-screen '>
 
             <title>Community Page</title>
 
@@ -14,7 +14,7 @@ const CommunityPage = () => {
                 className=' w-full  absolute  bg-cover bg-center object-fit opacity-80   h-full backdrop-blur-md'>
 
             </div>
-            <div className=" relative z-20 h-screen">
+            <div className=" relative z-20">
                 <div className=" bg-gradient-to-r from-gray-700 via-gray-900 to-black  text-white">
                     <nav className='w-11/12 mx-auto '>
                         <Navbar />

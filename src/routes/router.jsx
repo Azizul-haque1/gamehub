@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile";
 import GameDetails from "../pages/GameDetails";
 import NotFoundPage from "../pages/NotFoundPage";
+import CommunityPage from "../pages/CommunityPage";
 
 export const router = createBrowserRouter([
     {
@@ -39,6 +40,7 @@ export const router = createBrowserRouter([
                 </PrivateRoute>
             },
 
+
         ]
     },
     {
@@ -59,6 +61,10 @@ export const router = createBrowserRouter([
             }
 
         ]
+    },
+    {
+        path: '/community',
+        Component: CommunityPage
     },
 
     {

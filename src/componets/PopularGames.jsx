@@ -2,7 +2,7 @@ import React, { use, useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
 import GameCard from './GameCard';
 import Loader from './Loader';
-
+import { motion } from "motion/react"
 const PopularGames = () => {
     const { loading, error, data } = useFetch('/data.json')
     const [newData, setNewData] = useState([])
@@ -25,11 +25,16 @@ const PopularGames = () => {
     console.log(data);
     return (
         <div className='w-11/12 mx-auto '>
-            <h1 className='text-3xl font-bold text-center text-primary'>Popular Games</h1>
-            <div className="grid grid-cols-3 gap-4 ">
+            <h1 className='text-3xl font-bold text-center text-primary 0 '>Popular Games</h1>
+            <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
+                viewport={{ once: true, amount: 0.50 }}
+                className="grid grid-cols-3 gap-4 my-10 ">
                 {newData.map((singleGame) => <GameCard key={singleGame.id} singleGame={singleGame}></GameCard>)}
 
-            </div>
+            </motion.div>
         </div>
     );
 };

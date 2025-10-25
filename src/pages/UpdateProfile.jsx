@@ -35,7 +35,7 @@ const UpdateProfile = () => {
     }
     return (
         <div className="hero h-screen">
-            <div className='  flex  justify-center items-center rounded-2xl   py-20  px-30 shadow-2xl'>
+            <div className='  flex  justify-center items-center rounded-2xl   bg-white/10 py-20  px-30 shadow-2xl'>
                 <div className="flex space-x-10 items-center ">
                     <div className=" flex items-center justify-center w-40 h-40 rounded-full border-2 border-gray-200 ">
                         <img className='w-full h-full rounded-full  object-cover'

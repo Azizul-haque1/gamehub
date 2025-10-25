@@ -7,13 +7,10 @@ const Navbar = () => {
     const { user, signOutFunc } = use(AuthContext)
     const navigate = useNavigate()
     console.log(user);
-    // const links = <>
-    //     <NavLink to='/'>Home</NavLink>
-    //     <NavLink to='/'>All Game</NavLink>
-    //     <NavLink to='/'>Home</NavLink>
-    //     <NavLink to='/auth/login'>Login</NavLink>
-    //     <Link to='/auth/register'>Register</Link>
-    // </>
+    const links = <>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/community'>Community</NavLink>
+    </>
 
     const handleLogOut = () => {
         signOutFunc()
@@ -42,9 +39,9 @@ const Navbar = () => {
                 <Link to='/'><img className='w-40' src={logo} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex  ">
-                <ul className="menu menu-horizontal px-1 z-10 
+                <ul className="menu menu-horizontal  text-white px-1 z-10 
                 ">
-                    {/* {links} */}
+                    {links}
                 </ul>
             </div>
             <div className="navbar-end">

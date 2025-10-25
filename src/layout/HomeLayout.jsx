@@ -2,8 +2,10 @@ import React from 'react';
 import Navbar from '../componets/Navbar';
 import { Outlet } from 'react-router';
 import Footer from '../componets/Footer';
+import useFetch from '../hooks/useFetch';
 
 const HomeLayout = () => {
+
     return (
         <div className='w-full relative min-h-screen overflow-hidden'
 

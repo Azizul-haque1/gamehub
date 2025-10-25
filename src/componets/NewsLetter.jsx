@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 
 const NewsLetter = () => {
     return (
-        <div className=" py-10 px-20 bg-[#F9F8F5]">
+        <div className=" flex flex-col items-center justify-center py-10 px-20 bg-[#F9F8F5]">
 
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -20,8 +20,8 @@ const NewsLetter = () => {
                         Newsletter!</h1>
                     <p className='mt-2 text-gray-500'>Be the first to get exclusive offers
                         ands the latest news</p>
-                    <div className="join ">
-                        <input className="input w-full join-item" placeholder="Enter your email address" />
+                    <div className="join w-full mx-auto ">
+                        <input className="input w-1/2 join-item" placeholder="Enter your email address" />
                         <button className="btn bg-primary border-none text-white join-item rounded-r-full">Subscribe</button>
                     </div>
                 </div>

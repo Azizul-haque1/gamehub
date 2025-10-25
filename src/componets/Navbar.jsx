@@ -75,7 +75,12 @@ const Navbar = () => {
                         <button className=' px-3 py-1 rounded-full border border-transparent text-white bg-primary hover:border-primary hover:bg-white hover:text-primary' onClick={handleLogOut} type='button'>Logout</button>
 
                     </div>
-                        : <Link to='/auth/login' className='px-4 py-1 rounded-full border border-transparent text-white bg-primary hover:border-primary hover:bg-white hover:text-primary'>Login</Link>
+                        : <div className="  space-x-2">
+                            <Link to='/auth/login' className='px-4 py-1 rounded-full border border-transparent text-white bg-primary hover:border-primary hover:bg-white hover:text-primary'>Login</Link>
+
+                            <Link to='/auth/register' className='px-4 py-1 rounded-full border border-transparent text-white bg-secondary hover:border-primary hover:bg-white hover:text-primary'>Sign Up</Link>
+
+                        </div>
                 }
             </div>
         </div>

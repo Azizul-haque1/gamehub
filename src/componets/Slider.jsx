@@ -14,7 +14,6 @@ import { Link } from 'react-router';
 
 
 const Slider = () => {
-
     const { data, loading } = useFetch('/data.json')
     const [activeIndex, setActiveIndex] = useState(0)
     const [newData, setNewData] = useState([])

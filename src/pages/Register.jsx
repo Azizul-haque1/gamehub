@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { motion } from "motion/react"
 
 const Register = () => {
     const [show, setShow] = useState(false)
@@ -109,13 +110,17 @@ const Register = () => {
         }
     };
     return (
-        <div className="hero min-h-screen">
+        <div className="hero min-h-screen mt-5">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
 
                 </div>
 
-                <div className="card bg-white/20 w-full max-w-sm shrink-0 shadow-2xl">
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3, duration: 0.8 }}
+                    className="card bg-white/20 w-full max-w-sm shrink-0 shadow-2xl">
                     <h1 className="text-3xl font-bold text-center pt-5 ">Create an Account
                     </h1>
                     <form onSubmit={handleRegister} className="card-body w-sm">
@@ -136,14 +141,14 @@ const Register = () => {
                                 </span>
                             </div>
                             <button className="btn btn-neutral mt-4 hover:bg-primary border-transparent">Create Account</button>
-                            <p className='pt-2'>Already have an account? <Link to='/auth/login' className='text-green-500 hover:underline'>Login</Link>
+                            <p className='pt-2'>Already have an account? <Link to='/auth/login' className='text-blue-700 hover:underline font-bold'>Login</Link>
 
                             </p>
                         </fieldset>
                     </form>
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </div >
     );
 };
 

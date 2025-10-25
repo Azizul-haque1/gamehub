@@ -18,7 +18,7 @@ const Profile = () => {
         <div className="hero h-screen">
             <title>profile</title>
             <div className='  flex  justify-center items-center rounded-2xl bg-white/10   p-20 shadow-2xl'>
-                <div className="flex space-x-10 items-center ">
+                <div className="flex flex-col md:flex-row md:justify-center space-x-10 items-center ">
                     <div className=" flex items-center justify-center w-40 h-40 rounded-full border-2 border-gray-200 ">
                         <img className='w-full h-full rounded-full  object-cover'
 

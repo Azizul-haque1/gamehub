@@ -67,11 +67,11 @@ const Slider = () => {
 
                                     className="  flex text-white flex-col w-full justify-center bottom-1/9 absolute">
                                     <h1 className=' young-font 
-                              text-9xl font-bold text-center tracking-wide'>{singleData.title}</h1>
+                              text-5xl md:text-7xl lg:text-9xl font-bold text-center tracking-wide'>{singleData.title}</h1>
                                     <div className="flex flex-col items-center justify-center">
 
-                                        <p className='mt-2 text-xl nunito-sans w-1/3 tracking-wide  items-center text-center'>{singleData.description}</p>
-                                        <Link to={`/game-details/${singleData.id}`} className='bg-primary mt-4 rounded-lg px-4 py-2'>Explore</Link>
+                                        <p className='mt-2 text-xs md:text-xl nunito-sans w-1/3 tracking-wide  items-center text-center'>{singleData.description}</p>
+                                        <Link to={`/game-details/${singleData.id}`} className='bg-primary mt-4 text-xs md:text-sm lg:text-xl rounded-lg px-4 py-2'>Explore</Link>
                                     </div>
                                 </motion.div>
                             </div>

@@ -35,7 +35,7 @@ const GameDetails = () => {
                 !loading && data &&
 
                 <div className="">
-                    <div className="flex gap-4  border-b pb-5 border-gray-300">
+                    <div className="flex gap-4 flex-col md:flex-row  border-b pb-5 border-gray-300">
                         <div className="flex-1  image">
                             <img
                                 className='bg-white p-4'

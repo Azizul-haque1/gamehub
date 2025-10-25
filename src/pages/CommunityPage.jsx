@@ -6,6 +6,7 @@ const CommunityPage = () => {
     return (
 
         <div className='w-full relative h-screen '>
+
             <title>Community Page</title>
 
             <div

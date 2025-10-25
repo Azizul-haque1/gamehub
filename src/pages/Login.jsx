@@ -28,7 +28,9 @@ const Login = () => {
                         .then(res => {
                             setLoading(false)
                             console.log(res);
-                            return toast.warning('verify your account')
+                            toast.warning('verify your account')
+                            return
+
                         })
                         .catch(error => {
                             console.log(error);
@@ -106,9 +108,9 @@ const Login = () => {
 
 
     return (
-        <div className="hero min-h-screen">
+        <div className="hero min-h-screen ">
             <title>login</title>
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:flex-row-reverse ">
                 <div className="text-center lg:text-left">
 
                 </div>
@@ -119,7 +121,7 @@ const Login = () => {
                     transition={{ delay: 0.3, duration: 0.8 }}
                     className="card w-full max-w-sm shrink-0 bg-white/20 shadow-2xl">
                     <h1 className="text-3xl font-bold text-center pt-5 ">Login here</h1>
-                    <form onSubmit={handleLogin} className="card-body w-sm">
+                    <form onSubmit={handleLogin} className="card-body max-w-sm">
                         <fieldset className="fieldset">
                             <label className="label">Email</label>
                             <input name='email' type="email" className="input border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:placeholder-neutral-content" placeholder="Email" />
@@ -127,7 +129,7 @@ const Login = () => {
                             >
                                 <label className="label">Password</label>
                                 <input name='password' type={show ? 'text' : 'password'} className="input border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:placeholder-neutral-content" placeholder="Password" />
-                                <span onClick={() => setShow(!show)} className=' absolute right-[24px] top-[32px] z-10  cursor-pointer '>
+                                <span onClick={() => setShow(!show)} className=' absolute right-3 top-[32px] z-10  cursor-pointer '>
                                     {show ? <FaEye /> : < FaEyeSlash />}
                                 </span>
                             </div><div><Link to={'/auth/forget-password'} className="link link-hover">Forgot password?</Link></div>

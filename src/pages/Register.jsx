@@ -124,7 +124,7 @@ const Register = () => {
                     className="card bg-white/20 w-full max-w-sm shrink-0 shadow-2xl">
                     <h1 className="text-3xl font-bold text-center pt-5 ">Create an Account
                     </h1>
-                    <form onSubmit={handleRegister} className="card-body w-sm">
+                    <form onSubmit={handleRegister} className="card-body max-w-lg">
                         <fieldset className="fieldset">
                             {/* Name */}
                             <label className="label">Name</label>

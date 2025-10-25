@@ -25,13 +25,14 @@ const PopularGames = () => {
     console.log(data);
     return (
         <div className='w-11/12 mx-auto '>
-            <h1 className='text-3xl font-bold text-center text-primary 0 '>Popular Games</h1>
+            <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold text-center text-primary  '>Popular Games</h1>
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
                 viewport={{ once: true, amount: 0.50 }}
-                className="grid grid-cols-3 gap-4 my-10 ">
+                className="grid grid-cols-1
+                  md:grid-cols-2 lg:grid-cols-3 gap-4 my-10 ">
                 {newData.map((singleGame) => <GameCard key={singleGame.id} singleGame={singleGame}></GameCard>)}
 
             </motion.div>

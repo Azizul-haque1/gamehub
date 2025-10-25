@@ -25,7 +25,7 @@ const ForgetPassword = () => {
 
     }
     return (
-        <div className="hero bg-base-100 min-h-screen">
+        <div className="hero  min-h-screen">
             <title>Forget Password</title>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
@@ -33,9 +33,9 @@ const ForgetPassword = () => {
 
                 </div>
 
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-10">
+                <div className="card bg-white/20 w-full max-w-sm shrink-0 shadow-2xl py-10">
                     <h1 className="text-3xl font-bold text-center pt-5 ">Forget here</h1>
-                    <form onSubmit={handleForgetPass} className="card-body w-sm">
+                    <form onSubmit={handleForgetPass} className="card-body  min-w-xs">
                         <fieldset className="fieldset">
                             <label className="label">Email</label>
                             <input ref={emailRef} type="email" className="input border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:placeholder-neutral-content" placeholder="Email" />

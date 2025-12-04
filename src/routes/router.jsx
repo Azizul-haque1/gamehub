@@ -11,6 +11,10 @@ import UpdateProfile from "../pages/UpdateProfile";
 import GameDetails from "../pages/GameDetails";
 import NotFoundPage from "../pages/NotFoundPage";
 import CommunityPage from "../pages/CommunityPage";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
+import Support from "../pages/Support";
+import AllGames from "../pages/AllGames";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +24,42 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home,
+            },
+            {
+                path: '/all-games',
+                Component: AllGames
+            },
+            {
+                path: 'about',
+                Component: About
+
+            },
+            {
+                path: '/community',
+                Component: CommunityPage
+
+            },
+            {
+                path: '/contact',
+                Component: Contact
+
+            },
+            {
+                path: '/support',
+                Component: Support
+
+            },
+            {
+                path: '/auth/login',
+                Component: Login,
+            },
+            {
+                path: '/auth/register',
+                Component: Register
+            },
+            {
+                path: '/auth/forget-password',
+                Component: ForgetPassword
             },
             {
                 path: '/my-profile',
@@ -35,9 +75,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/game-details/:id',
-                element: <PrivateRoute>
-                    <GameDetails />
-                </PrivateRoute>
+                element: <GameDetails />
+
             },
 
 
@@ -47,25 +86,11 @@ export const router = createBrowserRouter([
         path: '/auth',
         Component: AuthLayout,
         children: [
-            {
-                path: '/auth/login',
-                Component: Login,
-            },
-            {
-                path: '/auth/register',
-                Component: Register
-            },
-            {
-                path: '/auth/forget-password',
-                Component: ForgetPassword
-            }
+
 
         ]
     },
-    {
-        path: '/community',
-        Component: CommunityPage
-    },
+
 
     {
         path: '*',

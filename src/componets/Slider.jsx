@@ -52,36 +52,50 @@ const Slider = () => {
 
                 {newData?.map((singleData, index) =>
                     <SwiperSlide key={index}>
-
                         {index === activeIndex && (
-                            <div
+                            <div className="relative w-full h-[600px]">
 
-                                className=' relative '>
+                                {/* Image */}
+                                <img
+                                    className="object-cover h-[600px] w-full"
+                                    src={singleData.coverPhoto}
+                                    alt={singleData.title}
+                                />
 
-                                <img className=' object-cover h-[600px] w-full' src={singleData.coverPhoto} alt="" />
+                                {/* Dark overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+
+                                {/* Content */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 100 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ ease: 'easeOut', duration: 0.8 }}
+                                    className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4"
+                                >
 
-                                    className="  flex text-white flex-col w-full justify-center bottom-1/9 absolute">
-                                    <h1 className=' young-font 
-                              text-5xl md:text-7xl lg:text-9xl font-bold text-center tracking-wide'>{singleData.title}</h1>
-                                    <div className="flex flex-col items-center justify-center">
+                                    <h1 className="young-font text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-widest drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)]">
+                                        {singleData.title}
+                                    </h1>
 
-                                        <p className='mt-2 text-xs md:text-xl nunito-sans w-1/3 tracking-wide  items-center text-center'>{singleData.description}</p>
-                                        <Link to={`/game-details/${singleData.id}`} className='bg-primary mt-4 text-xs md:text-sm lg:text-xl rounded-lg px-4 py-2'>Explore</Link>
-                                    </div>
+                                    <p className="mt-4 max-w-2xl text-sm md:text-lg opacity-90">
+                                        {singleData.description}
+                                    </p>
+
+                                    <Link
+                                        to={`/game-details/${singleData.id}`}
+                                        className="mt-6 px-6 py-3 rounded-full bg-primary 
+                     hover:bg-secondary transition-all duration-300
+                     hover:scale-110 shadow-lg"
+                                    >
+                                        Explore Game
+                                    </Link>
+
                                 </motion.div>
                             </div>
                         )}
-
-
-                        {/* <img className=' object-cover h-[600px] w-full' src={singleData.coverPhoto} alt="" /> */}
-
-
                     </SwiperSlide>
+
                 )}
 
             </Swiper>

@@ -4,68 +4,66 @@ import useFetch from '../hooks/useFetch';
 import Loader from '../componets/Loader';
 import { FaStar } from 'react-icons/fa';
 
-
 const GameDetails = () => {
-    const { loading, data } = useFetch('/data.json')
-    const [filteredData, setFilteredData] = useState([])
-    console.log(data);
-    const { id } = useParams()
+    const { loading, data } = useFetch('/allData.json');
+    const [filteredData, setFilteredData] = useState(null);
+    const { id } = useParams();
 
     useEffect(() => {
         if (data && data.length > 0) {
-
-            const found = [...data].find(singleData => String(singleData.id) === String(id))
-            setFilteredData(found || null)
-
+            const found = data.find(singleData => String(singleData.id) === String(id));
+            setFilteredData(found || null);
         }
+    }, [data, id]);
 
-    }, [data, id])
+    if (loading || !filteredData) return <Loader />;
 
-
-    // if (loading) {
-    //     return <Loader />
-    // }
-
-    console.log(filteredData);
     return (
-        <div className=' p-4 bg-[#F9F8F5]'>
-            <title>Game Details</title>
-            {loading && <Loader />}
-            {
-                !loading && data &&
+        <div className="min-h-screen bg-secondary text-base-content p-5 md:p-10">
+            <title>{filteredData.title} - GameHub</title>
 
-                <div className="">
-                    <div className="flex gap-4 flex-col md:flex-row  border-b pb-5 border-gray-300">
-                        <div className="flex-1  image">
-                            <img
-                                className='bg-white p-4'
-                                src={filteredData.coverPhoto} alt="" />
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 bg-neutral rounded-2xl shadow-xl overflow-hidden">
+                {/* Game Image */}
+                <div className="flex-1 bg-base-100 p-4 flex items-center justify-center">
+                    <img
+                        src={filteredData.coverPhoto}
+                        alt={filteredData.title}
+                        className="rounded-xl object-cover max-h-[400px] md:max-h-[500px]"
+                    />
+                </div>
 
-                        </div>
-                        <div className="flex-1 content">
-                            <h1 className='text-3xl font-bold'>{filteredData.title}</h1>
+                {/* Game Content */}
+                <div className="flex-1 p-6 flex flex-col justify-between">
+                    <div>
+                        <h1 className="text-3xl md:text-4xl font-bold text-primary mb-3">
+                            {filteredData.title}
+                        </h1>
 
-                            <p className='text-gray-400 pb-4 border-b border-gray-300'>Developed by: <span className='text-primary'>{filteredData.developer}</span></p>
+                        <p className="text-gray-400 mb-4">
+                            Developed by: <span className="text-accent">{filteredData.developer}</span>
+                        </p>
 
-
-                            <div className=" my-4">
-                                <span className='flex text-yellow-500 gap-2 items-center'> <span> <FaStar /></span> {filteredData.ratings}</span>
-
-                            </div>
-                            <p className='font-bold pb-4'>Description:  <span className='text-gray-500'>{filteredData.description}</span></p>
-
-                            <Link className='mt-4 text-white bg-primary hover:bg-primary/80 px-4 py-2 cursor-pointer rounded-lg' target='_blank' to={filteredData.downloadLink}>Download Now</Link>
-
+                        <div className="flex items-center gap-2 text-yellow-400 mb-4">
+                            <FaStar /> <span>{filteredData.ratings}</span>
                         </div>
 
+                        <p className="mb-6">
+                            <span className="font-bold text-primary">Description:</span>{" "}
+                            <span className="text-gray-400">{filteredData.description}</span>
+                        </p>
                     </div>
 
-
+                    <div>
+                        <Link
+                            to={filteredData.downloadLink}
+                            target="_blank"
+                            className="inline-block bg-primary hover:bg-primary/80 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                        >
+                            Download Now 🚀
+                        </Link>
+                    </div>
                 </div>
-            }
-
-
-
+            </div>
         </div>
     );
 };

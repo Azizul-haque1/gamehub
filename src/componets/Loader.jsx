@@ -5,7 +5,7 @@ const Loader = () => {
     return (
         <div className='flex items-center justify-center h-screen'>
 
-            <DotLoader color='#20c997' />
+            <DotLoader color='#7c3aed' />
 
         </div>
     );

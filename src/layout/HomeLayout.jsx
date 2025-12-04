@@ -1,39 +1,44 @@
-import React from 'react';
-import Navbar from '../componets/Navbar';
-import { Outlet } from 'react-router';
-import Footer from '../componets/Footer';
-import useFetch from '../hooks/useFetch';
+import React from 'react'
+import Navbar from '../componets/Navbar'
+import { Outlet } from 'react-router'
+import Footer from '../componets/Footer'
 
 const HomeLayout = () => {
-
     return (
-        <div className='w-full relative min-h-screen overflow-hidden'
+        <div className="w-full min-h-screen relative  bg-secondary">
 
-        >
-
+            {/* Background Image
             <div
-                style={{ backgroundImage: "url('https://i.ibb.co.com/hRX57VBX/8764038.jpg')" }}
-                className=' w-full  absolute  bg-cover bg-center object-fit opacity-80   h-full backdrop-blur-md'>
+                style={{
+                    backgroundImage: "url('https://i.ibb.co.com/hRX57VBX/8764038.jpg')",
+                }}
+                className="absolute inset-0 bg-cover bg-center"
+            /> */}
 
-            </div>
-            <div className=" relative z-20">
-                <header className=' ackdrop-blur-sm w-full
-             bg-gradient-to-r from-gray-700 via-gray-900 to-black shadow-md'>
-                    <nav className='myContainer'>
+            {/* Theme overlay */}
+            <div className="absolute inset-0 bg-neutral/80 backdrop-blur-sm" />
+
+            {/* Main Content */}
+            <div className="relative z-20 flex flex-col min-h-screen">
+
+                <header className="w-full bg-secondary/60 backdrop-blur-xl shadow-lg border-b border-primary/20 sticky top-0 z-50">
+                    <nav className="w-10/12 mx-auto">
                         <Navbar />
                     </nav>
                 </header>
-                <main className=''>
+                {/* Page content */}
+                <main className="flex-grow">
                     <Outlet />
                 </main>
-                <footer>
-                    <Footer></Footer>
+
+                {/* Footer */}
+                <footer className="bg-secondary/80 backdrop-blur-xl border-t border-primary/20">
+                    <Footer />
                 </footer>
+
             </div>
-
-
         </div>
-    );
-};
+    )
+}
 
-export default HomeLayout;
+export default HomeLayout

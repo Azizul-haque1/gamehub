@@ -1,0 +1,203 @@
+[
+  {
+    "id": "1",
+    "title": "PUBG",
+    "coverPhoto": "https://wallpapers.com/images/high/pubg-squad-continental-series-charity-showdown-north-america-boe9lsnjiwdd1skv.webp",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": 4.8,
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Neon Drift",
+    "coverPhoto": "https://i.ibb.co.com/WvkfgynX/hypercar-glows-neon-rain-drenched-futuristic-streets-beacon-speed-city-s-heart-drift-velocity-unleas.webp",
+    "category": "Racing",
+    "downloadLink": "https://designed-by-jonas.itch.io/neon-drift",
+    "description": "An urban neon-styled racing game with tight controls and multiplayer leaderboards.",
+    "ratings": 4.9,
+    "developer": "Indie Studio"
+  },
+  {
+    "id": "3",
+    "title": "Sky Fortress",
+    "coverPhoto": "https://i.ibb.co.com/XBC694Z/Sky-Fortress-Wallpaper.webp",
+    "category": "Strategy",
+    "downloadLink": "https://www.xbox.com/en-US/games/store/just-cause-3-sky-fortress/BZNWF8K967VV",
+    "description": "Build and defend your sky fortress against waves of enemies in a vibrant world.",
+    "ratings": 4.6,
+    "developer": "Sky Labs"
+  },
+  {
+    "id": "4",
+    "title": "Candy Crush Saga",
+    "coverPhoto": "https://i.ibb.co.com/4Zvxnm6v/200x200ia-75.webp",
+    "category": "Puzzle",
+    "downloadLink": "https://i.ibb.co.com/4Zvxnm6v/200x200ia-75.webp",
+    "description": "A match-three puzzle game with thousands of levels and sweet challenges.",
+    "ratings": 4.7,
+    "developer": "King"
+  },
+  
+  {
+    "id": "5",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-genshin.webp",
+    "category": "RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/en/",
+    "description": "An open-world action RPG set in the vast fantasy world of Teyvat.",
+    "ratings": 4.5,
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "6",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-clash.webp",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Build your village, train your troops, and battle millions of other players online.",
+    "ratings": 4.8,
+    "developer": "Supercell"
+  },
+  {
+    "id": "7",
+    "title": "Asphalt 9: Legends",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-asphalt.webp",
+    "category": "Racing",
+    "downloadLink": "https://www.gameloft.com/game/asphalt-9-legends",
+    "description": "Experience console-quality arcade racing with stunning graphics and a massive lineup of hypercars.",
+    "ratings": 4.6,
+    "developer": "Gameloft"
+  },
+  {
+    "id": "8",
+    "title": "Call of Duty Mobile",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-cod.webp",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Console-quality HD gaming on your phone with customizable controls and classic modes.",
+    "ratings": 4.7,
+    "developer": "Activision"
+  },
+  {
+    "id": "9",
+    "title": "The Sims Mobile",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-sims.webp",
+    "category": "Simulation",
+    "downloadLink": "https://www.ea.com/games/the-sims/the-sims-mobile",
+    "description": "Create your Sims, give them unique personalities, and customize their homes in full detail.",
+    "ratings": 4.3,
+    "developer": "Electronic Arts"
+  },
+  {
+    "id": "10",
+    "title": "Subway Surfers",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-subway.webp",
+    "category": "Arcade",
+    "downloadLink": "https://apps.apple.com/us/app/subway-surfers/id512939461",
+    "description": "Dodge trains in an endless runner, grinding trains with your cool crew.",
+    "ratings": 4.8,
+    "developer": "SYBO Games"
+  },
+  {
+    "id": "11",
+    "title": "Fate/Grand Order",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-fgo.webp",
+    "category": "RPG",
+    "downloadLink": "https://fate-go.us/",
+    "description": "A turn-based RPG where you summon powerful historical figures as 'Servants'.",
+    "ratings": 4.4,
+    "developer": "Aniplex"
+  },
+  {
+    "id": "12",
+    "title": "Bloons TD 6",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-btd.webp",
+    "category": "Strategy",
+    "downloadLink": "https://ninjakiwi.com/games/bloons-td-6",
+    "description": "The latest installment of the tower defense saga, featuring 3D towers and a variety of upgrades.",
+    "ratings": 4.9,
+    "developer": "Ninja Kiwi"
+  },
+  {
+    "id": "13",
+    "title": "Hill Climb Racing 2",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-hillclimb.webp",
+    "category": "Racing",
+    "downloadLink": "https://www.fingersoft.com/games/hill-climb-racing-2/",
+    "description": "Race up hills in this physics-based driving game, competing against players worldwide.",
+    "ratings": 4.6,
+    "developer": "Fingersoft"
+  },
+  {
+    "id": "14",
+    "title": "Gardenscapes",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-gardenscapes.webp",
+    "category": "Puzzle",
+    "downloadLink": "https://playrix.com/gardenscapes",
+    "description": "Solve match-3 puzzles to restore a wonderful garden to its former glory.",
+    "ratings": 4.5,
+    "developer": "Playrix"
+  },
+  {
+    "id": "15",
+    "title": "Minecraft Pocket Edition",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-minecraft.webp",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/en-us/get-minecraft",
+    "description": "Explore infinite worlds and build everything from the simplest of homes to the grandest of castles.",
+    "ratings": 4.7,
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "16",
+    "title": "Free Fire MAX",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-freefire.webp",
+    "category": "FPS",
+    "downloadLink": "https://ffmax.garena.com/",
+    "description": "A battle royale game designed exclusively to deliver premium gameplay experience in a Battle Royale.",
+    "ratings": 4.4,
+    "developer": "Garena"
+  },
+  {
+    "id": "17",
+    "title": "Puzzles & Dragons",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-pad.webp",
+    "category": "RPG",
+    "downloadLink": "https://www.puzzleanddragons.us/",
+    "description": "A unique hybrid of puzzle and RPG elements, where you collect and evolve monsters.",
+    "ratings": 4.2,
+    "developer": "GungHo Online"
+  },
+  {
+    "id": "18",
+    "title": "RollerCoaster Tycoon Touch",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-rct.webp",
+    "category": "Simulation",
+    "downloadLink": "https://rct-touch.com/",
+    "description": "Build, customize, and manage your own dream amusement park.",
+    "ratings": 4.1,
+    "developer": "Atari"
+  },
+  {
+    "id": "19",
+    "title": "8 Ball Pool",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-8ball.webp",
+    "category": "Sports",
+    "downloadLink": "https://www.miniclip.com/games/8-ball-pool/",
+    "description": "The world's most popular pool game, playing against friends and competing in tournaments.",
+    "ratings": 4.7,
+    "developer": "Miniclip"
+  },
+  {
+    "id": "20",
+    "title": "Two Dots",
+    "coverPhoto": "https://i.ibb.co.com/placeholder-twodots.webp",
+    "category": "Puzzle",
+    "downloadLink": "https://wearetwodots.com/twodots/",
+    "description": "Connect two dots of the same color to make a line, or four to make a square, in this minimalist puzzle game.",
+    "ratings": 4.8,
+    "developer": "PlayDots"
+  }
+]

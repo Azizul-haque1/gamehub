@@ -49,10 +49,12 @@ const AllGames = () => {
             {/* Section Header */}
             <div className="text-center mb-8">
                 <h1 className='text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-3'>
-                    Popular Games
+                    Explore All Games
+
                 </h1>
                 <p className='text-accent text-sm md:text-base'>
-                    Discover the top-rated and most played games
+                    Browse through our extensive library of games and find your next adventure
+
                 </p>
                 <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-4 rounded-full"></div>
             </div>
